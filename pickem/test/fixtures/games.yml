@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ht_id: MyString
+  hscore: MyString
+  at_id: MyString
+  ascore: MyString
+  week: MyString
+  id: MyString
+  time: MyString
+
+two:
+  ht_id: MyString
+  hscore: MyString
+  at_id: MyString
+  ascore: MyString
+  week: MyString
+  id: MyString
+  time: MyString

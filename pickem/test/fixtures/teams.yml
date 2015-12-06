@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  name: MyString
+  logo_url: MyString
+  wins: MyString
+  losses: MyString
+  played: MyString
+  off_pass_ypg: MyString
+  off_rush_ypg: MyString
+  off_tot_ypg: MyString
+  def_pass_ypg: MyString
+  def_rush_ypg: MyString
+  def_tot_ypg: MyString
+
+two:
+  id: MyString
+  name: MyString
+  logo_url: MyString
+  wins: MyString
+  losses: MyString
+  played: MyString
+  off_pass_ypg: MyString
+  off_rush_ypg: MyString
+  off_tot_ypg: MyString
+  def_pass_ypg: MyString
+  def_rush_ypg: MyString
+  def_tot_ypg: MyString

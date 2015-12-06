@@ -1,0 +1,17 @@
+<nav class="nav-banner">
+  <a class="nav-btn" href="/">Home</a>
+  <a class="nav-btn" href="/#">Users</a>
+  <a class="nav-btn" href="/#">Games</a>
+  <a class="nav-btn" href="/#">Teams</a>
+  <!-- Add link to user's show page and log out button if logged in -->
+  <% if logged_in? %>
+    <a class="nav-btn" href="/#">My Picks</a>
+    <!--<a class="nav-btn" href="/#">Settings</a>-->
+    <%= link_to 'Log out', logout_path, method: :delete %>
+  <!-- Add log in and sign up link otherwise -->
+  <% else %>
+    <a class="nav-btn" href="/login" name="Log in">Log in</a>
+    <%= link_to 'Sign up', new_user_path %>
+  <% end %>
+  </span>
+</nav>
