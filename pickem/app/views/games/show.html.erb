@@ -1,0 +1,30 @@
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
+<h1><%= image_tag(@away.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %> <%= @away.name %> @ <%= @home.name %> <%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></h1>
+<h2>Week <%= @game.week %></h2>
+<h2><%= @game.time %></h2>
+<h2><%= @game.ascore %>-<%= @game.hscore %></h2>
+<% if logged_in? %>
+  <% @pick = Pick.where(:user_id => current_user.id, :game_id => @game.id).first %>
+  <% if @pick.nil? %>
+    <p>You did not make a pick for this game</p>
+  <% else %>
+    <% @team_picked = @home if @pick.pick == 1 %>
+    <% @team_picked = @away if @pick.pick == 2 %>
+    <p>Your pick for this game was <%= team_picked %></p>
+  <% end %>
+<% end %>

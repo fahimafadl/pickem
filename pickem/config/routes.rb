@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get '/teams' => 'teams#index'
+
+  get '/teams/:id' => 'teams#show'
+
+  get 'games/:week' => 'games#index'
+
+  get 'game/:id' => 'games#show', :as => :game_path
+
   resources :users
   root 'welcome#index'
   get '/login' => 'sessions#new'

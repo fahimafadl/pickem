@@ -1,28 +1,55 @@
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
 <p id="notice"><%= notice %></p>
-<h2><%= @user.name %>'s Statuses</h2>
+<h1><%= @user.name %>'s Picks</h1>
 <p>Email: <%= @user.email %></p>
 <table>
   <thead>
     <tr>
       <th colspan="3"></th>
+      <tr>
+        <td>W/L Ratio: <%= @user.user_record.ratio %></td>
+        <td>Wins: <%= @user.user_record.wins %></td>
+        <td>Losses: <%= @user.user_record.losses %></td>
+        <td>Total Picks: <%= @user.user_record.total %></td>
     </tr>
   </thead>
 
   <tbody>
-    <% @user.statuses.each do |status| %>
+    <% @user.picks.each do |pick| %>
       <tr>
-        <td><%= status.text %></td>
+        <% @game = game.find(pick.game_id) %>
+        <% @ht = team.find(@game.ht_id) %>
+        <% @at = team.find(@game.at_id) %>
+        <td><%= @ht.name %></td>
+        <td><%= @game.ht_score %></td>
+        <td><%= @at.name %></td>
+        <td><%= @game.at_score %></td>
+        <td>Week <%= @game.week %></td>
+        <td><%= @game.timd %></td>
         <% if @user == current_user %>
-          <td><%= link_to 'Edit', edit_status_path(status.id) %></td>
-          <td><%= link_to 'Destroy', delete_status_path(status.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <!--INSERT LINK TO EDIT PICK HERE-->
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 <% if @user == current_user %>
-  <%= link_to 'New Status', new_status_path %> |
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <!--INSERT LINK TO MAKE A NEW PICK HERE-->
 <% end %>
-<%= link_to 'Back', users_path %>
+<p><%= link_to 'Back', users_path %></p>

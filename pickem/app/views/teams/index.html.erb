@@ -1,0 +1,36 @@
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
+<h1>Teams</h1>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= image_tag(team.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>
+        <td><a class="nav-btn" href="/teams/<%= team.id %>"><%= team.name %></a></td>
+        <td><%= team.wins %>-<%= team.losses %></td>
+        <td>(<%= Division.where(:data_name => team.division).first.name %>)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

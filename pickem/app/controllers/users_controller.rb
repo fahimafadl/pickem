@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user_record = @user.user_record
   end
 
   # GET /users/new
@@ -25,6 +26,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user_record = UserRecord.create(:wins => 0, :losses => 0, :total => 0, :ratio => 0.0)
+    @user.user_record = @user_record
 
     respond_to do |format|
       if @user.save
@@ -69,6 +72,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params[:user]
+      params.require(:user).permit(:name, :email, :password)
     end
 end

@@ -1,0 +1,59 @@
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
+<h1>Week <%= @week %> Games</h1>
+<table>
+  <thead></thead>
+  <tbody>
+    <tr>
+      <td><a class="nav-btn" href="/games/1">1</a></td>
+      <td><a class="nav-btn" href="/games/2">2</a></td>
+      <td><a class="nav-btn" href="/games/3">3</a></td>
+      <td><a class="nav-btn" href="/games/4">4</a></td>
+      <td><a class="nav-btn" href="/games/5">5</a></td>
+      <td><a class="nav-btn" href="/games/6">6</a></td>
+      <td><a class="nav-btn" href="/games/7">7</a></td>
+      <td><a class="nav-btn" href="/games/8">8</a></td>          
+      <td><a class="nav-btn" href="/games/9">9</a></td>
+      <td><a class="nav-btn" href="/games/10">10</a></td>
+      <td><a class="nav-btn" href="/games/11">11</a></td>
+      <td><a class="nav-btn" href="/games/12">12</a></td>
+      <td><a class="nav-btn" href="/games/13">13</a></td>
+      <td><a class="nav-btn" href="/games/14">14</a></td>
+      <td><a class="nav-btn" href="/games/15">15</a></td>
+      <td><a class="nav-btn" href="/games/16">16</a></td>  
+      <td><a class="nav-btn" href="/games/17">17</a></td>    
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <% @home = Team.where(:team_id => game.ht_id).first %>
+      <% @away = Team.where(:team_id => game.at_id).first %>
+      <tr>        
+        <td><%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>      <td><%= @home.name %></td>
+        <td><a class="nav-btn" href="/game/<%= game.id %>"><%= game.hscore %>-<%= game.ascore %></a></td>
+        <td><%= @away.name %></td>
+        <td><%= image_tag(@away.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

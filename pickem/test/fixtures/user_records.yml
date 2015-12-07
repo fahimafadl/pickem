@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  wins: 1
+  losses: 1
+  total: 1
+  ratio: 1.5
+
+two:
+  user_id: 1
+  wins: 1
+  losses: 1
+  total: 1
+  ratio: 1.5

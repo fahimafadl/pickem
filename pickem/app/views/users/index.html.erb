@@ -1,6 +1,23 @@
+<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1>Top Ranked Users</h1>
 
 <table>
   <thead>
@@ -12,13 +29,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td>Name: <%= user.name %></td>
-        <td>Email: <%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <% if user == current_user %>
-          <td><%= link_to 'Edit', edit_user_path(user) %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <td><%= link_to user.name, user %></td>
+        <td>W/L Ratio: <%= user.user_record.ratio %></td>
+        <td>Total Picks: <%= user.user_record.total %></td>
+        <td>Wins: <%= user.user_record.wins %></td>
+        <td>Losses: <%= user.user_record.losses %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +41,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<!-- SORT TABLE -->

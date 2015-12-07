@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206190532) do
+ActiveRecord::Schema.define(version: 20151207014713) do
+
+  create_table "divisions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "data_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "ht_id"
@@ -24,9 +31,9 @@ ActiveRecord::Schema.define(version: 20151206190532) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "games_users", force: :cascade do |t|
+  create_table "picks", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "game_id"
+    t.integer  "game_id"
     t.integer  "pick"
     t.integer  "result"
     t.datetime "created_at", null: false
@@ -48,6 +55,17 @@ ActiveRecord::Schema.define(version: 20151206190532) do
     t.float    "def_tot_ypg"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "division"
+  end
+
+  create_table "user_records", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "total"
+    t.float    "ratio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
