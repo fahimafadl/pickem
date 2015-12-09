@@ -77,10 +77,12 @@ class PicksController < ApplicationController
   def make_updates(week)
     Pick.where(:week => week).find_each do |pick|
       game = Game.find(pick.game_id)
-      pick.result = 1 if game.hscore > game.ascore
-      pick.result = 2 if game.hscore < game.ascore
-      pick.result = 3 if game.hscore == game.ascore
-      pick.save!
+      unless game.hscore.nil?
+        pick.result = 1 if game.hscore > game.ascore
+        pick.result = 2 if game.hscore < game.ascore
+        pick.result = 3 if game.hscore == game.ascore
+        pick.save!
+      end
     end
     User.find_each do |user|
       @user_record = user.user_record
