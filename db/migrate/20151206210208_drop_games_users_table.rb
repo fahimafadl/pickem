@@ -1,9 +1,6 @@
 class DropGamesUsersTable < ActiveRecord::Migration
-  def up
-    drop_table :games_users
-  end
 
-  def down
+  def change
     create_table :picks do |t|
       t.integer :user_id
       t.integer :game_id
