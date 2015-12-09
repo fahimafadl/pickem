@@ -35294,3 +35294,933 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
   Rendered layouts/_nav.html.erb (2.1ms)
 Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:28:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."week" = ?  [["week", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "wsh"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "mia"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "dal"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyg"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (97.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (12.3ms)
+Completed 200 OK in 437ms (Views: 413.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/game/187" for ::1 at 2015-12-09 04:28:19 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"187"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPick Load (0.1ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1  [["user_id", 3], ["game_id", 187]]
+  Rendered games/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/game/187/make_pick" for ::1 at 2015-12-09 04:28:20 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"187"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  Rendered picks/_form.html.erb (15.4ms)
+  Rendered picks/new.html.erb within layouts/application (16.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 106ms (Views: 96.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:28:22 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0Cb80nOgyiHKcXxB22ahk2peO3/A4lpQRnPec4Yb692gAu32YL8YWOYIPIzqEmAvlywpOa5G4gIVKPGiJjRdQ==", "pick"=>{"pick"=>"1"}, "game_id"=>"187", "commit"=>"Create Pick"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", "187"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["pick", 1], ["result", 0], ["user_id", 3], ["game_id", 187], ["week", 1], ["created_at", "2015-12-09 09:28:22.187839"], ["updated_at", "2015-12-09 09:28:22.187839"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mPick Load (0.2ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."week" = ?  ORDER BY "picks"."id" ASC LIMIT 1000[0m  [["week", 1]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 177]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 178]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 179]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 180]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 181]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 183]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 184]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?[0m  [["result", 2], ["updated_at", "2015-12-09 09:28:22.201860"], ["id", 9]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1000[0m
+  [1m[35mUserRecord Load (0.2ms)[0m  SELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mPick Load (0.2ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1000[0m  [["user_id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "user_records" SET "losses" = ?, "total" = ?, "ratio" = ?, "updated_at" = ? WHERE "user_records"."id" = ?[0m  [["losses", 4], ["total", 8], ["ratio", 0.5], ["updated_at", "2015-12-09 09:28:22.225100"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 45ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:28:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserRecord Load (0.1ms)[0m  SELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mPick Load (0.3ms)[0m  [1mSELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 177]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 178]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 179]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "hou"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "kc"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 180]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 181]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ind"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 183]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 371]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 184]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  Rendered users/show.html.erb within layouts/application (29.8ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 121ms (Views: 115.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:28:40 -0500
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[35mGame Load (0.1ms)[0m  SELECT "games".* FROM "games" WHERE "games"."week" = ?  [["week", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "wsh"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "mia"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "dal"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyg"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sf"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 83ms (Views: 80.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/game/185" for ::1 at 2015-12-09 04:28:43 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"185"}
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPick Load (0.1ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1  [["user_id", 3], ["game_id", 185]]
+  Rendered games/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/game/185/make_pick" for ::1 at 2015-12-09 04:28:44 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"185"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 185]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  Rendered picks/_form.html.erb (1.7ms)
+  Rendered picks/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:28:45 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRXVPpV9pfMwcYDDC85fFi8lHWT6d3uHvx/G48Y7JQI41UV6BTHautTAZcA/C4wQ3NDVLePN6Wb2UqpcgLub2A==", "pick"=>{"pick"=>"1"}, "game_id"=>"185", "commit"=>"Create Pick"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", "185"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["pick", 1], ["result", 0], ["user_id", 3], ["game_id", 185], ["week", 1], ["created_at", "2015-12-09 09:28:45.959485"], ["updated_at", "2015-12-09 09:28:45.959485"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:28:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserRecord Load (0.1ms)[0m  SELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mPick Load (0.2ms)[0m  [1mSELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 177]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 178]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 179]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "hou"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "kc"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 180]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 181]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ind"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 183]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 371]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 184]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  Rendered users/show.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 89.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:29:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."week" = ?  [["week", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "wsh"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "mia"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "dal"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyg"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (86.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (9.8ms)
+Completed 200 OK in 401ms (Views: 376.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/game/188" for ::1 at 2015-12-09 04:29:38 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPick Load (0.1ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1  [["user_id", 3], ["game_id", 188]]
+  Rendered games/show.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/game/188/make_pick" for ::1 at 2015-12-09 04:29:40 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 188]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "oak"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cin"]]
+  Rendered picks/_form.html.erb (21.1ms)
+  Rendered picks/new.html.erb within layouts/application (22.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 117ms (Views: 109.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:29:42 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VbFN1GUNPJx56iPgjzFU5Km6RN+pYKyRFH2UpZb+Eq8llVzwdhLu5VWTYy2+RZVYVMhWmcfEFMNHJrt0NtGkA==", "pick"=>{"pick"=>"2"}, "game_id"=>"188", "commit"=>"Create Pick"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", "188"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["pick", 2], ["result", 0], ["user_id", 3], ["game_id", 188], ["week", 1], ["created_at", "2015-12-09 09:29:42.448074"], ["updated_at", "2015-12-09 09:29:42.448074"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.7ms)
+
+RuntimeError (Don't know how to build task 'db:update_picks'):
+  app/controllers/picks_controller.rb:43:in `block in create'
+  app/controllers/picks_controller.rb:41:in `create'
+
+
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.8ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (40.8ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:31:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUserRecord Load (0.2ms)[0m  [1mSELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mPick Load (0.4ms)[0m  SELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?  [["user_id", 3]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 177]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ne"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "pit"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 178]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "chi"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "gb"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 179]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 180]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyj"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cle"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 181]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 183]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "jax"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "car"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 371]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 184]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "stl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sea"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 185]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  Rendered users/show.html.erb within layouts/application (70.4ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 453ms (Views: 403.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:32:04 -0500
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."week" = ?[0m  [["week", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ne"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "pit"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "chi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "gb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "hou"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "kc"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyj"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cle"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ind"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "wsh"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "mia"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "jax"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "car"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "stl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sea"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sd"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "det"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "oak"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cin"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "den"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "bal"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "dal"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyg"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "atl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (24.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 108ms (Views: 104.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/game/189" for ::1 at 2015-12-09 04:32:07 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"189"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 189]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "den"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "bal"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPick Load (0.2ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1[0m  [["user_id", 3], ["game_id", 189]]
+  Rendered games/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/game/189/make_pick" for ::1 at 2015-12-09 04:32:08 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"189"}
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 189]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  Rendered picks/_form.html.erb (11.7ms)
+  Rendered picks/new.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:32:12 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7J0bLcMIyi8U++5JV6+g8p1wKpXVpAb+fATkr7QeYfi9XYtpU0S1ZvBKC0pjanP0boXi3MwelB81SYgQ8p7fIg==", "pick"=>{"pick"=>"1"}, "game_id"=>"189", "commit"=>"Create Pick"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 189]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", "189"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["pick", 1], ["result", 0], ["user_id", 3], ["game_id", 189], ["week", 1], ["created_at", "2015-12-09 09:32:12.678940"], ["updated_at", "2015-12-09 09:32:12.678940"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.6ms)
+
+NameError (undefined local variable or method `args' for #<PicksController:0x007ff946eccda8>):
+  app/controllers/picks_controller.rb:78:in `make_updates'
+  app/controllers/picks_controller.rb:42:in `block in create'
+  app/controllers/picks_controller.rb:40:in `create'
+
+
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Fahim/.rvm/gems/ruby-2.1.5/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.0ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:32:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUserRecord Load (0.1ms)[0m  [1mSELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mPick Load (0.3ms)[0m  SELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?  [["user_id", 3]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 177]]
+  [1m[35mTeam Load (0.6ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ne"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "pit"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 178]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "chi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "gb"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 179]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 180]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyj"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cle"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 181]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 183]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "jax"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "car"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 371]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 184]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "stl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sea"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 185]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 189]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "den"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "bal"]]
+  Rendered users/show.html.erb within layouts/application (70.6ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 474ms (Views: 423.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:32:54 -0500
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."week" = ?  [["week", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "wsh"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "mia"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "dal"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyg"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sf"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (27.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 96.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/game/186" for ::1 at 2015-12-09 04:32:57 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"186"}
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPick Load (0.1ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1  [["user_id", 3], ["game_id", 186]]
+  Rendered games/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/game/186/make_pick" for ::1 at 2015-12-09 04:32:58 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"186"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 186]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sd"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "det"]]
+  Rendered picks/_form.html.erb (12.4ms)
+  Rendered picks/new.html.erb within layouts/application (13.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 94ms (Views: 91.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:32:59 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J85nFEd55pv336fVNT+ZVyk4iW/A4NMCMRD1MqBLLJp2DvdQ1zWZ0hNuQtYB+kpR2s1BJtlaQeN4XZmN5suSQA==", "pick"=>{"pick"=>"1"}, "game_id"=>"186", "commit"=>"Create Pick"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", "186"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["pick", 1], ["result", 0], ["user_id", 3], ["game_id", 186], ["week", 1], ["created_at", "2015-12-09 09:32:59.818555"], ["updated_at", "2015-12-09 09:32:59.818555"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mPick Load (0.3ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."week" = ?  ORDER BY "picks"."id" ASC LIMIT 1000[0m  [["week", 1]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 177]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 178]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 179]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 180]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 181]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 183]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 184]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?  [["result", 1], ["updated_at", "2015-12-09 09:32:59.831968"], ["id", 10]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?  [["result", 2], ["updated_at", "2015-12-09 09:32:59.835677"], ["id", 11]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 189]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?  [["result", 1], ["updated_at", "2015-12-09 09:32:59.838463"], ["id", 12]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?  [["result", 1], ["updated_at", "2015-12-09 09:32:59.841286"], ["id", 13]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1000
+  [1m[36mUserRecord Load (0.1ms)[0m  [1mSELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mPick Load (0.2ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1000  [["user_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "user_records" SET "wins" = ?, "total" = ?, "ratio" = ?, "updated_at" = ? WHERE "user_records"."id" = ?  [["wins", 8], ["total", 12], ["ratio", 0.6667], ["updated_at", "2015-12-09 09:32:59.846239"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 33ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:32:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUserRecord Load (0.1ms)[0m  [1mSELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mPick Load (0.1ms)[0m  SELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?  [["user_id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 177]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ne"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "pit"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 178]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "chi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "gb"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 179]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "hou"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "kc"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 180]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyj"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cle"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 181]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ind"]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 183]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "jax"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "car"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 371]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 184]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "stl"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sea"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "tb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ten"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 185]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "oak"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cin"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 189]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "den"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "bal"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sd"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "det"]]
+  Rendered users/show.html.erb within layouts/application (55.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 163.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/games/1" for ::1 at 2015-12-09 04:33:03 -0500
+Processing by GamesController#index as HTML
+  Parameters: {"week"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."week" = ?[0m  [["week", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ne"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "pit"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "chi"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "gb"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "hou"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "kc"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "nyj"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cle"]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ind"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "wsh"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "mia"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "jax"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "car"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "stl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "sea"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "ari"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "no"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sd"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "det"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "oak"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cin"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "den"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "bal"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "dal"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyg"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "atl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "min"]]
+  Rendered games/index.html.erb within layouts/application (21.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/game/191" for ::1 at 2015-12-09 04:33:05 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"191"}
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 191]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "atl"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "phi"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPick Load (0.1ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ? AND "picks"."game_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1[0m  [["user_id", 3], ["game_id", 191]]
+  Rendered games/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/game/191/make_pick" for ::1 at 2015-12-09 04:33:07 -0500
+Processing by PicksController#new as HTML
+  Parameters: {"id"=>"191"}
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 191]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  Rendered picks/_form.html.erb (1.5ms)
+  Rendered picks/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/picks" for ::1 at 2015-12-09 04:33:09 -0500
+Processing by PicksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXSUzH5Q5/NrhY6GbJoqExvU1y8TRERTb99HMcJbeApstASI7hyYuo80a4VYX/kV6CEfZgr+1rImkiuOhNvG0A==", "pick"=>{"pick"=>"2"}, "game_id"=>"191", "commit"=>"Create Pick"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 191]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", "191"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "picks" ("pick", "result", "user_id", "game_id", "week", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["pick", 2], ["result", 0], ["user_id", 3], ["game_id", 191], ["week", 1], ["created_at", "2015-12-09 09:33:09.901178"], ["updated_at", "2015-12-09 09:33:09.901178"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mPick Load (0.1ms)[0m  SELECT  "picks".* FROM "picks" WHERE "picks"."week" = ?  ORDER BY "picks"."id" ASC LIMIT 1000  [["week", 1]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 177]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 178]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 179]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 180]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 181]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 183]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 184]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 187]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 185]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 189]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 186]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 191]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "picks" SET "result" = ?, "updated_at" = ? WHERE "picks"."id" = ?[0m  [["result", 1], ["updated_at", "2015-12-09 09:33:09.916919"], ["id", 14]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1000[0m
+  [1m[35mUserRecord Load (0.1ms)[0m  SELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mPick Load (0.1ms)[0m  [1mSELECT  "picks".* FROM "picks" WHERE "picks"."user_id" = ?  ORDER BY "picks"."id" ASC LIMIT 1000[0m  [["user_id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_records" SET "losses" = ?, "total" = ?, "ratio" = ?, "updated_at" = ? WHERE "user_records"."id" = ?[0m  [["losses", 5], ["total", 13], ["ratio", 0.6154], ["updated_at", "2015-12-09 09:33:09.922649"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 26ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-09 04:33:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUserRecord Load (0.1ms)[0m  SELECT  "user_records".* FROM "user_records" WHERE "user_records"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mPick Load (0.1ms)[0m  [1mSELECT "picks".* FROM "picks" WHERE "picks"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 177]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ne"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "pit"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 178]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "chi"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "gb"]]
+  [1m[36mGame Load (0.0ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 179]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "hou"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "kc"]]
+  [1m[35mGame Load (0.0ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 180]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "nyj"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "cle"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 181]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "buf"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ind"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 183]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "jax"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "car"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 371]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "buf"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 184]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "stl"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sea"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 187]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "tb"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ten"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 185]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "ari"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "no"]]
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 188]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "oak"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "cin"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 189]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "den"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "bal"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1[0m  [["id", 186]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "sd"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "det"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT 1  [["id", 191]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1[0m  [["team_id", "atl"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."team_id" = ?  ORDER BY "teams"."id" ASC LIMIT 1  [["team_id", "phi"]]
+  Rendered users/show.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+Completed 200 OK in 130ms (Views: 124.4ms | ActiveRecord: 3.9ms)

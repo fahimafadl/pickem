@@ -1,7 +1,4 @@
 class PicksController < ApplicationController
-  require 'rake'
-  Rake::Task.clear
-  Pickem::Application.load_tasks
   before_action :set_pick, only: [:show, :edit, :update, :destroy]
 
   # GET /picks
@@ -42,8 +39,7 @@ class PicksController < ApplicationController
 
     respond_to do |format|
       if @pick.save
-        Rake::Task["db:update_picks"].invoke(@pick.week)
-        Rake::Task["db:update_users"].invoke
+        make_updates(@pick.week)
         format.html { redirect_to current_user, notice: 'Pick was successfully created.' }
         format.json { render :show, status: :created, location: @pick }
       else
@@ -58,8 +54,7 @@ class PicksController < ApplicationController
   def update
     respond_to do |format|
       if @pick.update(pick_params)
-        Rake::Task["db:update_picks"].invoke(@pick.week)
-        Rake::Task["db:update_users"].invoke
+        make_updates(@pick.week)
         format.html { redirect_to current_user, notice: 'Pick was successfully updated.' }
         format.json { render :show, status: :ok, location: @pick }
       else
@@ -78,6 +73,39 @@ class PicksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def make_updates(week)
+    Pick.where(:week => week).find_each do |pick|
+      game = Game.find(pick.game_id)
+      pick.result = 1 if game.hscore > game.ascore
+      pick.result = 2 if game.hscore < game.ascore
+      pick.result = 3 if game.hscore == game.ascore
+      pick.save!
+    end
+    User.find_each do |user|
+      @user_record = user.user_record
+      @wins = 0
+      @losses = 0
+      @ratio = 0.0
+      Pick.where(:user_id => user.id).find_each do |pick|
+        @wins += 1 if pick.result == pick.pick
+        @losses += 1 if pick.result != pick.pick && pick.result != 0
+      end
+      if @wins == 0
+        @ratio = 0.0
+      elsif @wins > 0 && @losses == 0
+        @ratio = 1.0
+      else
+        @ratio = @wins.to_f/(@losses.to_f+@wins.to_f)
+      end
+      @ratio = (@ratio * 10000).round / 10000.0
+      @user_record.wins = @wins
+      @user_record.losses = @losses
+      @user_record.total = @wins + @losses
+      @user_record.ratio = @ratio
+      @user_record.save!
+    end   
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
