@@ -40,6 +40,10 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
