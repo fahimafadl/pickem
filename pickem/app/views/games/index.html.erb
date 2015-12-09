@@ -49,9 +49,10 @@ p {
       <% @home = Team.where(:team_id => game.ht_id).first %>
       <% @away = Team.where(:team_id => game.at_id).first %>
       <tr>        
-        <td><%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>      <td><%= @home.name %></td>
+        <td><%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>      
+        <td><a class="nav-btn" href="/teams/<%= @home.id %>"><%= @home.name %></a></td>
         <td><a class="nav-btn" href="/game/<%= game.id %>"><%= game.hscore %>-<%= game.ascore %></a></td>
-        <td><%= @away.name %></td>
+        <td><a class="nav-btn" href="/teams/<%= @away.id %>"><%= @away.name %></a></td>
         <td><%= image_tag(@away.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></td>
       </tr>
     <% end %>

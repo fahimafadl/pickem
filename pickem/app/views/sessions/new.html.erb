@@ -1,7 +1,7 @@
 <h1 id="log_in">Log In</h1>
 <%= form_tag('/login') do %>
   <% if session[:errors] %>
-    <p>Invalid username/password combination. Please make sure your username is capitalized.</p>
+    <p style="color:red">Invalid username/password combination.</p>
   <% end %>
   <div class="field">
     <%= label_tag :name %>

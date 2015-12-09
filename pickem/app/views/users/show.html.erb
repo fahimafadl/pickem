@@ -18,6 +18,9 @@ p {
 <p id="notice"><%= notice %></p>
 <h1><%= @user.name %>'s Picks</h1>
 <p>Email: <%= @user.email %></p>
+<% if @user == current_user %>
+  <!--INSERT LINK TO MAKE A NEW PICK HERE-->
+<% end %>
 <table>
   <thead>
     <tr>
@@ -49,7 +52,5 @@ p {
     <% end %>
   </tbody>
 </table>
-<% if @user == current_user %>
-  <!--INSERT LINK TO MAKE A NEW PICK HERE-->
-<% end %>
+
 <p><%= link_to 'Back', users_path %></p>

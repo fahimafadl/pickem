@@ -1,12 +1,12 @@
 namespace :db do | |
   desc 'Update the wins, losses, ratio, and total picks of each user'
-  task users: :environment do
+  task update_users: :environment do
     User.find_each do |user|
       @user_record = user.user_record
       @wins = 0
       @losses = 0
       @ratio = 0.0
-      Pick.where(:user_id => @user.id).find_each do |pick|
+      Pick.where(:user_id => user.id).find_each do |pick|
         @wins += 1 if pick.result == pick.pick
         @losses += 1 if pick.result != pick.pick && pick.result != 0
       end
