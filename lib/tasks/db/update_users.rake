@@ -13,7 +13,7 @@ namespace :db do | |
       if @wins == 0
         @ratio = 0.0
       elsif @wins > 0 && @losses == 0
-        @ratio = 100.0
+        @ratio = 1.0
       else
         @ratio = @wins.to_f/(@losses.to_f+@wins.to_f)
       end
