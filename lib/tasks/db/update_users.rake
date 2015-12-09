@@ -6,9 +6,11 @@ namespace :db do | |
       @wins = 0
       @losses = 0
       @ratio = 0.0
+      @total = 0
       Pick.where(:user_id => user.id).find_each do |pick|
         @wins += 1 if pick.result == pick.pick
         @losses += 1 if pick.result != pick.pick && pick.result != 0
+        @total += 1
       end
       if @wins == 0
         @ratio = 0.0
@@ -20,7 +22,7 @@ namespace :db do | |
       @ratio = (@ratio * 10000).round / 10000.0
       @user_record.wins = @wins
       @user_record.losses = @losses
-      @user_record.total = @wins + @losses
+      @user_record.total = @total
       @user_record.ratio = @ratio
       @user_record.save!
     end
