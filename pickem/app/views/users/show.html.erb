@@ -18,9 +18,6 @@ p {
 <p id="notice"><%= notice %></p>
 <h1><%= @user.name %>'s Picks</h1>
 <p>Email: <%= @user.email %></p>
-<% if @user == current_user %>
-  <!--INSERT LINK TO MAKE A NEW PICK HERE-->
-<% end %>
 <table>
   <thead>
     <tr>
@@ -36,17 +33,21 @@ p {
   <tbody>
     <% @user.picks.each do |pick| %>
       <tr>
-        <% @game = game.find(pick.game_id) %>
-        <% @ht = team.find(@game.ht_id) %>
-        <% @at = team.find(@game.at_id) %>
+        <% @game = Game.find(pick.game_id) %>
+        <% @ht = Team.where(:team_id => @game.ht_id).first %>
+        <% @at = Team.where(:team_id => @game.at_id).first %>
+        <% @team_picked = @ht.name if pick.pick == 1 %>
+        <% @team_picked = @at.name if pick.pick == 2 %>
+        <% @team_picked = "tie" if pick.pick == 3 %>
         <td><%= @ht.name %></td>
-        <td><%= @game.ht_score %></td>
+        <td><%= @game.hscore %></td>
         <td><%= @at.name %></td>
-        <td><%= @game.at_score %></td>
+        <td><%= @game.ascore %></td>
+        <td>Pick: <%= @team_picked %></td>
         <td>Week <%= @game.week %></td>
-        <td><%= @game.timd %></td>
+        <td><%= @game.time %></td>
         <% if @user == current_user %>
-          <!--INSERT LINK TO EDIT PICK HERE-->
+          <td><a class="nav-btn" href="/picks/<%= pick.id %>/edit_pick">Change your Pick</a></td>        
         <% end %>
       </tr>
     <% end %>

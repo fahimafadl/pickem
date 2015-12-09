@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'game/:id/make_pick' => 'picks#new', :as => :new_pick
-  get 'game/:id/edit_pick' => 'picks#edit', :as => :edit_pick
+  get 'picks/:id/edit_pick' => 'picks#edit', :as => :edit_pick
   resources :picks
   get '/teams' => 'teams#index'
 

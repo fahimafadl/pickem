@@ -15,12 +15,13 @@ namespace :db do | |
       elsif @wins > 0 && @losses == 0
         @ratio = 100.0
       else
-        @ratio = @wins/@losses
+        @ratio = @wins.to_f/(@losses.to_f+@wins.to_f)
       end
       @user_record.wins = @wins
       @user_record.losses = @losses
       @user_record.total = @wins + @losses
       @user_record.ratio = @ratio
+      @user_record.save!
     end
   end
 end

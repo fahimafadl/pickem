@@ -28,10 +28,10 @@ div {
     <p>You did not make a pick for this game</p>
     <div><a class="nav-btn" href="/game/<%= @game.id %>/make_pick">Make a Pick</a></div>
   <% else %>
-    <% @team_picked = @home if @pick.pick == 1 %>
-    <% @team_picked = @away if @pick.pick == 2 %>
+    <% @team_picked = @home.name if @pick.pick == 1 %>
+    <% @team_picked = @away.name if @pick.pick == 2 %>
     <% @team_picked = "tie" if @pick.pick == 3 %>
     <p>Your pick for this game was <%= @team_picked %></p>
-    <div><a class="nav-btn" href="/game/<%= @game.id %>/edit_pick">Edit your Pick</a></div>
+    <div><a class="nav-btn" href="/picks/<%= @pick.id %>/edit_pick">Change your Pick</a></div>
   <% end %>
 <% end %>

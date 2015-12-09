@@ -22,7 +22,8 @@ class PicksController < ApplicationController
 
   # GET /picks/1/edit
   def edit
-    @game = Game.find(params[:id])
+    @pick = Pick.find(params[:id])
+    @game = @pick.game
     @home = Team.where(:team_id => @game.ht_id).first
     @away = Team.where(:team_id => @game.at_id).first
   end
@@ -30,9 +31,11 @@ class PicksController < ApplicationController
   # POST /picks
   # POST /picks.json
   def create
-    @pick = Pick.create(pick_params)
+    @pick = Pick.new(pick_params)
     @pick.result = 0
     @pick.user_id = current_user.id
+    @pick.game_id = Game.find(params[:game_id]).id
+    @pick.week = Game.find(params[:game_id]).week
 
     respond_to do |format|
       if @pick.save

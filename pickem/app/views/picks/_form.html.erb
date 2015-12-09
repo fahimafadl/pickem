@@ -1,6 +1,7 @@
+<h1><%= image_tag(@away.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %> <%= @away.name %> @ <%= @home.name %> <%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></h1>
 <%= form_for(@pick) do |f| %>
-  <%= f.select :pick, [["Home", 1],["Away", 2],["Tie", 3]], {} %>
-  <%= hidden_field_tag 'game_id', 177 %> 
+  <%= f.select :pick, [[@game.ht_id, 1],[@game.at_id, 2],["Tie", 3]], {} %>
+  <%= hidden_field_tag 'game_id', @game.id %> 
   <% if @pick.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
