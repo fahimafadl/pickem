@@ -1,5 +1,16 @@
-<h1><%= image_tag(@team.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %> <%= @team.name %></h1>
-<p><%= @team.wins %>-<%= @team.losses %></p>
+<head>
+<style>
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+</style>
+</head>
+
+<h1><%= image_tag(@team.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %> <%= @team.name %> (<%= @team.wins %>-<%= @team.losses %>)</h1>
 <p>Offensive Passing YPG: <%= @team.off_pass_ypg %></p>
 <p>Offensive Rushing YPG: <%= @team.off_rush_ypg %></p>
 <p>Offensive Total YPG: <%= @team.off_tot_ypg %></p>

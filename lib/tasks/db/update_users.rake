@@ -17,6 +17,7 @@ namespace :db do | |
       else
         @ratio = @wins.to_f/(@losses.to_f+@wins.to_f)
       end
+      @ratio = (@ratio * 10000).round / 10000.0
       @user_record.wins = @wins
       @user_record.losses = @losses
       @user_record.total = @wins + @losses

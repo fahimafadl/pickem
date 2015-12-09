@@ -1,4 +1,53 @@
+<head>
+<style>
+td.title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+td.title2 {
+  font-weight: bold;
+}
+</style>
+</head>
 <h1><%= image_tag(@away.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %> <%= @away.name %> @ <%= @home.name %> <%= image_tag(@home.logo_url, :alt => "Logo", :height => 40.96, :width => 54.60) %></h1>
+<table>
+  <tr>
+    <td class="title">Statistic</td>
+    <td class="title"><%= @home.name %></td>
+    <td class="title"><%= @away.name %></td>
+  </tr>
+  <tr>
+    <td class="title2">Offensive Pass YPG</td>
+    <td><%= @home.off_pass_ypg %></td>
+    <td><%= @away.off_pass_ypg %></td>
+  </tr>
+  <tr>
+    <td class="title2">Offensive Rush YPG</td>
+    <td><%= @home.off_rush_ypg %></td>
+    <td><%= @away.off_rush_ypg %></td>
+  </tr>
+  <tr>
+    <td class="title2">Offensive Total YPG</td>
+    <td><%= @home.off_tot_ypg %></td>
+    <td><%= @away.off_tot_ypg %></td>
+  </tr>
+  <tr>
+    <td class="title2">Defensive Pass YPG</td>
+    <td><%= @home.def_pass_ypg %></td>
+    <td><%= @away.def_pass_ypg %></td>
+  </tr>
+  <tr>
+    <td class="title2">Defensive Rush YPG</td>
+    <td><%= @home.def_rush_ypg %></td>
+    <td><%= @away.def_rush_ypg %></td>
+  </tr>
+  <tr>
+    <td class="title2">Defensive Total YPG</td>
+    <td><%= @home.def_tot_ypg %></td>
+    <td><%= @away.def_tot_ypg %></td>
+  </tr>
+</table>
 <%= form_for(@pick) do |f| %>
   <%= f.select :pick, [[@game.ht_id, 1],[@game.at_id, 2],["Tie", 3]], {} %>
   <%= hidden_field_tag 'game_id', @game.id %> 

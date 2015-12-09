@@ -12,22 +12,21 @@ table {
 p {
   text-align: center;
 }
+
+h3 {
+  text-align: center;
+}
 </style>
 </head>
 
 <p id="notice"><%= notice %></p>
 <h1><%= @user.name %>'s Picks</h1>
 <p>Email: <%= @user.email %></p>
+<h3>W/L Ratio: <%= @user.user_record.ratio %> Wins: <%= @user.user_record.wins %> Losses: <%= @user.user_record.losses %> Total Picks: <%= @user.user_record.total %></h3>
 <table>
   <thead>
     <tr>
       <th colspan="3"></th>
-      <tr>
-        <td>W/L Ratio: <%= @user.user_record.ratio %></td>
-        <td>Wins: <%= @user.user_record.wins %></td>
-        <td>Losses: <%= @user.user_record.losses %></td>
-        <td>Total Picks: <%= @user.user_record.total %></td>
-    </tr>
   </thead>
 
   <tbody>

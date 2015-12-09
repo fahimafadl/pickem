@@ -1,12 +1,16 @@
 namespace :db do
   desc 'Update scores based on all available scores'
-  task :update_scores, [:week] => :environment do |t, args|
+  task update_scores: :environment do ||
     puts 'Starting scores update task'
-    (args[:week]..17).each do |i|
+    (1..17).each do |i|
       puts "Updating Week #{i} scores"
       game_data = ESPN.get_nfl_scores(2015,i)
       game_data.each do |game|
-        Game.create(:time => game[:game_date], :ht_id => game[:home_team], :hscore => game[:home_score], :at_id => game[:away_team], :ascore => game[:away_score], :week => i)
+        game_to_update = Game.where(:week => i, :ht_id => game[:home_team]).first
+        game_to_update.hscore = game[:home_score]
+        game_to_update.ascore = game[:away_score]
+        game_to_update.time = game[:game_date]
+        game_to_update.save!
       end
     end
   end

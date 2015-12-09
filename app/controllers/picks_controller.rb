@@ -1,4 +1,7 @@
 class PicksController < ApplicationController
+  require 'rake'
+  Rake::Task.clear
+  Pickem::Application.load_tasks
   before_action :set_pick, only: [:show, :edit, :update, :destroy]
 
   # GET /picks
@@ -39,7 +42,9 @@ class PicksController < ApplicationController
 
     respond_to do |format|
       if @pick.save
-        format.html { redirect_to @pick, notice: 'Pick was successfully created.' }
+        Rake::Task["db:update_picks"].invoke(@pick.week)
+        Rake::Task["db:update_users"].invoke
+        format.html { redirect_to current_user, notice: 'Pick was successfully created.' }
         format.json { render :show, status: :created, location: @pick }
       else
         format.html { render :new }
@@ -53,7 +58,9 @@ class PicksController < ApplicationController
   def update
     respond_to do |format|
       if @pick.update(pick_params)
-        format.html { redirect_to @pick, notice: 'Pick was successfully updated.' }
+        Rake::Task["db:update_picks"].invoke(@pick.week)
+        Rake::Task["db:update_users"].invoke
+        format.html { redirect_to current_user, notice: 'Pick was successfully updated.' }
         format.json { render :show, status: :ok, location: @pick }
       else
         format.html { render :edit }
