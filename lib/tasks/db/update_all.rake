@@ -9,6 +9,7 @@ namespace :db do ||
       date = date.advance(:weeks => 1)
     end
     p(week)
+    week -= week
     Rake::Task["db:update_scores"].invoke
     Rake::Task["db:update_picks"].invoke(week)
     Rake::Task["db:update_users"].invoke
